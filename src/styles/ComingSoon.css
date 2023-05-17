@@ -1,0 +1,27 @@
+.games-list {
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    grid-gap: 20px;
+}
+
+.games-list-item {
+    border: 1px solid black;
+    border-top: none;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.game-artwork {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.game-name {
+    font-weight: bold;
+    margin-left: auto;
+}

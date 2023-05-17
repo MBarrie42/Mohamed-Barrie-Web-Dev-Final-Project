@@ -1,0 +1,38 @@
+.genre-container {
+    padding-top: 100px;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0;
+    padding: 20px;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.genre-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+    margin-top: 20px;
+}
+
+.genre-item {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: lightgrey;
+}
+
+.genre-link {
+    text-decoration: none;
+    color: black;
+}
+
+.genre-button:hover {
+    text-decoration: underline;
+}

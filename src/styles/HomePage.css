@@ -1,0 +1,65 @@
+.homepage-container {
+    padding-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content-container {
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+.section-title {
+    margin-top: 40px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.games-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.game-section {
+    width: calc(33.33% - 10px);
+    margin-bottom: 20px;
+}
+
+.navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.links {
+    display: flex;
+}
+
+.link {
+    padding: 10px;
+    margin: 0 5px;
+    color: white;
+}
+
