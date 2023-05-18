@@ -9,7 +9,9 @@ const ConsoleDetails = () => {
     const [consoleName, setConsoleName] = useState('');
     const [consoleGames, setConsoleGames] = useState([]);
 
+
     useEffect(() => {
+        //Fetch console platforms for title name
         const fetchConsoleDetails = async () => {
             try {
                 const response = await axios.get(`https://api.rawg.io/api/platforms/${id}?key=cbde2235853a407382af5b7788c37b88`);
@@ -20,6 +22,7 @@ const ConsoleDetails = () => {
             }
         };
 
+        //Fetch games from said console
         const fetchConsoleGames = async () => {
             try {
                 const response = await axios.get(`https://api.rawg.io/api/games?key=cbde2235853a407382af5b7788c37b88&platforms=${id}`);
@@ -29,7 +32,6 @@ const ConsoleDetails = () => {
                 console.error('Error fetching console games:', error);
             }
         };
-
         fetchConsoleDetails();
         fetchConsoleGames();
     }, [id]);

@@ -8,6 +8,7 @@ const Consoles = () => {
     const [consoles, setConsoles] = useState([]);
 
     useEffect(() => {
+        //Fetch list of consoles
         const fetchConsoles = async () => {
             try {
                 const response = await axios.get('https://api.rawg.io/api/platforms?key=cbde2235853a407382af5b7788c37b88');
@@ -17,7 +18,6 @@ const Consoles = () => {
                 console.error('Error fetching consoles:', error);
             }
         };
-
         fetchConsoles();
     }, []);
 

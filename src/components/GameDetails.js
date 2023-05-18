@@ -12,6 +12,8 @@ const GameDetails = () => {
     const favoriteGames = cookies.favoriteGames || [];
 
     useEffect(() => {
+
+        //Fetch the information about specific games
         const fetchGameDetails = async () => {
             try {
                 const response = await axios.get(
@@ -33,12 +35,12 @@ const GameDetails = () => {
                 console.error('Error fetching game details:', error);
             }
         };
-
         fetchGameDetails();
     }, [gameName]);
 
-    const isFavorite = favoriteGames.some((favorite) => favorite.id === gameDetails?.id);
 
+    //Function to add and remove game from favorites in the GameDetails page
+    const isFavorite = favoriteGames.some((favorite) => favorite.id === gameDetails?.id);
     const handleFavoriteToggle = () => {
         if (isFavorite) {
             // Remove the game from favorites list
@@ -56,7 +58,6 @@ const GameDetails = () => {
             setCookie('favoriteGames', updatedFavorites, { path: '/' });
         }
     };
-
 
     return (
         <div>

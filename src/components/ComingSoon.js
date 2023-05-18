@@ -6,6 +6,7 @@ import '../styles/ComingSoon.css';
 const ComingSoon = () => {
     const [games, setGames] = useState([]);
 
+    // Use axios to fetch list of games that is upcoming
     useEffect(() => {
         const fetchComingSoonGames = async () => {
             try {
@@ -19,11 +20,11 @@ const ComingSoon = () => {
                 const comingSoonGames = response.data.results;
                 //Takes the top 10 games
                 setGames(comingSoonGames.slice(0, 10));
+                //error catching
             } catch (error) {
                 console.error('Error fetching coming soon games:', error);
             }
         };
-
         fetchComingSoonGames();
     }, []);
 

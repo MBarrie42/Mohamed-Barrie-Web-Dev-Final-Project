@@ -8,6 +8,7 @@ const Genre = () => {
     const [genres, setGenres] = useState([]);
 
     useEffect(() => {
+        //Fetch list of genres from API
         const fetchGenres = async () => {
             try {
                 const response = await axios.get(
@@ -19,7 +20,6 @@ const Genre = () => {
                 console.error('Error fetching genres:', error);
             }
         };
-
         fetchGenres();
     }, []);
 
